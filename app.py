@@ -22,7 +22,7 @@ def index():
     
 #zavola se po nacteni stranky s aktualnim datumem
 @app.route('/graph', methods=['GET'])
-def graph():
+def graph_get():
     total=db.count_total()
     date = datetime.today()
     selected_day=db.select_day(date.day,date.month,date.year)
